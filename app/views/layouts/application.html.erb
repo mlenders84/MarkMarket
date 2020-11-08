@@ -10,10 +10,13 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
+
     <%= render "layouts/header" %>
-
-
+<main>
     <%= yield %>
+</main>
+    <%= render "layouts/footer" %>
+
   </body>
       <script type="text/javascript">  document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.sidenav');
