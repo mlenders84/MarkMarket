@@ -19,6 +19,8 @@ gem 'devise'
 
 gem "paperclip", "~> 6.0.0"
 
+gem 'bootstrap-sass'
+
 
 
 group :development, :test do
