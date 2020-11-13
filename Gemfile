@@ -21,6 +21,10 @@ gem "paperclip", "~> 6.0.0"
 
 gem 'bootstrap-sass'
 
+gem 'will_paginate', '~> 3.1.0'
+
+gem 'will_paginate-materialize', git: 'https://github.com/mldoscar/will_paginate-materialize', branch: 'master'
+
 
 
 group :development, :test do
