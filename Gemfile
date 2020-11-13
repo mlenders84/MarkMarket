@@ -25,6 +25,10 @@ gem 'will_paginate', '~> 3.1.0'
 
 gem 'will_paginate-materialize', git: 'https://github.com/mldoscar/will_paginate-materialize', branch: 'master'
 
+gem 'friendly_id', '~> 5.4.0'
+
+gem 'dotenv-rails', groups: [:development, :test]
+
 
 
 group :development, :test do
