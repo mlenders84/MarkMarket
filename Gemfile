@@ -5,7 +5,6 @@ ruby '2.6.3'
 
 
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
-gem 'sqlite3', '~> 1.4'
 gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0'
@@ -35,10 +34,18 @@ gem 'aasm'
 
 
 
+
+
 group :development, :test do
 
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'sqlite3', '~> 1.4'
 end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+	end
 
 group :development do
 
