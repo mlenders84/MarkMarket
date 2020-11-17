@@ -31,6 +31,10 @@ gem 'stripe', '~> 5.11.0'
 
 gem 'aasm'
 
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+
+gem 'rails-ujs', '~> 0.1.0'
+
 
 
 
