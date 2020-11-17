@@ -10,13 +10,10 @@ require("@rails/activestorage").start()
 require("channels")
 
 //= require turbolinks
-//= require materialize
 //= require materialize-sprockets
 //= require bootstrap-sprockets
 //= require jquery
-//= require jquery_ujs
-//= require bootstrap
-//= require turbolinks
+//= require jquery_ujs   1 2
 //= require_tree
 
 

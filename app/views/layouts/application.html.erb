@@ -13,8 +13,13 @@
 
     <%= render "layouts/header" %>
 
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
+  <div class="conteniner">
+    <% flash.each do |type, message| %>
+    <script type="text/javascript">
+        M.toast({html: '<%= message %>', 4000})
+    </script>
+  <% end %>
+
         
 <main class="container">
     <%= yield %>
@@ -22,17 +27,24 @@
     <%= render "layouts/footer" %>
 
   </body>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
       <script type="text/javascript"> 
-        document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.sidenav');
-        var instances = M.Sidenav.init(elems, options);
-      });
-
-      // Or with jQuery
-
         $(document).ready(function(){
         $('.sidenav').sidenav();
       });
-
       </script>
+
+      <div class="container">
+      <% flash.each do |type, message| %>
+      <script>
+        $(document).ready(function(){
+          M.toast({html: "<%= message %>", classes: 'rounded <%= type %>'});
+        });
+      </script>
+      </div>
+  
+  <% end %>
+
 </html>
